@@ -1,0 +1,686 @@
+html, body {
+    height: 100%;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, section, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, textarea, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    -webkit-appearance: none;
+}
+
+div, header, ul, li, ol, a, span, form, footer, img, input, section, textarea, button, fieldset, legend, a:before, ::before {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: 0; 
+}
+
+@font-face {
+    font-family: 'SkolaSans';
+    src: url('/assets/fonts/skolasans-regular-webfont.eot');
+    src: url('/assets/fonts/skolasans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/skolasans-regular-webfont.woff2') format('woff2'),
+         url('/assets/fonts/skolasans-regular-webfont.woff') format('woff'),
+         url('/assets/fonts/skolasans-regular-webfont.ttf') format('truetype'),
+         url('/assets/fonts/skolasans-regular-webfont.svg#skolasansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SkolaSans';
+    src: url('/assets/fonts/skolasans-bold-webfont.eot');
+    src: url('/assets/fonts/skolasans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/skolasans-bold-webfont.woff2') format('woff2'),
+         url('/assets/fonts/skolasans-bold-webfont.woff') format('woff'),
+         url('/assets/fonts/skolasans-bold-webfont.ttf') format('truetype'),
+         url('/assets/fonts/skolasans-bold-webfont.svg#skolasansbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SkolaSans';
+    src: url('/assets/fonts/skolasans-regularitalic-webfont.eot');
+    src: url('/assets/fonts/skolasans-regularitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/skolasans-regularitalic-webfont.woff2') format('woff2'),
+         url('/assets/fonts/skolasans-regularitalic-webfont.woff') format('woff'),
+         url('/assets/fonts/skolasans-regularitalic-webfont.ttf') format('truetype'),
+         url('/assets/fonts/skolasans-regularitalic-webfont.svg#skolasansregular_italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+strong.blue {
+    color: #2EC9FF;
+}
+strong.pink {
+    color: #FE4676;
+}
+strong.white {
+    color: #FFF;
+}
+
+body {
+    background-color: #F7F9FA;
+    font-family: "SkolaSans";
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #7D868E;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background: #21293F;
+    display: block;
+    min-height: 800px;
+    text-align: center;
+    color: #FFF;
+    padding: 240px 0 40px 0;
+    position: relative;
+    z-index: 1;
+}
+
+header:before {
+    background: url("/assets/images/hero-flying.jpg") left center no-repeat;
+    background-size: 100%;
+    content: "";
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; 
+}
+
+header h2 {
+    font-size: 32px;
+    font-weight: lighter;
+    padding: 20px 0;
+}
+
+header #slogan {
+    font-size: 20px;
+    color: #fff;
+    opacity: 0.6;
+}
+
+header .button a,
+.stickyHeader .button a {
+    padding: 15px 30px 15px 30px;
+    display: inline-block;
+    margin-top: 60px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    background: #2ECC71;
+    border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+header .button a:hover,
+.stickyHeader .button a:hover {
+    background-color: #44d581;
+}
+
+header .button a:active,
+.stickyHeader .button a:active {
+    box-shadow: inset 0 0.1em 0.17em #25a25a;
+        -webkit-box-shadow: inset 0 0.1em 0.17em #25a25a;
+        -moz-box-shadow: inset 0 0.1em 0.17em #25a25a;
+    background-color: #2bc06a;
+}
+
+.container {
+    margin: 0 auto;
+    width: 990px;
+}
+
+h1 {
+    width: 200px;
+    height: 34px;
+    background: url("/assets/images/flysolo-logo.png") left top no-repeat;
+    background-size: 200px 34px;
+    text-indent: -10001px;
+    margin: 0 auto 50px auto;
+}
+
+.stickyHeader {
+    height: 90px;
+    background: #FFF;
+    border-bottom: 1px solid #C6D1DB;
+    padding: 20px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: none;
+}
+
+.stickyHeader h1 {
+    width: 140px;
+    height: 24px;
+    background-size: 140px 24px;
+    float: left;
+    margin-top: 12px;
+}
+
+.stickyHeader .button a {
+    float: right;
+    margin: 0;
+}
+
+h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #21293F;
+    margin-bottom: 20px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+section .subline {
+    font-size: 22px;
+    color: #7D868E;
+    line-height: 36px;
+}
+
+section.environment {
+    padding-bottom: 0;
+    background: #fff;
+    text-align: center;
+}
+
+section.environment img {
+    margin: 50px auto 0 auto;
+    display: block;
+    width: 100%;
+}
+
+section.features {
+    padding: 0;
+    background: #2EC9FF;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+section.features:before {
+    background: url("/assets/images/freelancer_guy.jpg") center center no-repeat;
+    background-size: auto 100%;
+    content: "";
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; 
+}
+
+section.features img {
+    width: 301px;
+}
+
+section.features section {
+    padding: 0;
+    margin-top: 50px;
+}
+
+section.features section strong {
+    color: #21293F;
+}
+
+section.features section.timeline {
+    margin-top: 100px;
+}
+
+section.features h3 {
+    color: #fff;
+}
+
+section.features img {
+    margin-left: 60px;
+    float: left;
+    margin-right: 50px;
+}
+
+section.features p {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+section.need_love,
+section.made_by {
+    text-align: center;
+}
+
+section.need_love {
+    background: #fff;
+}
+
+section.need_love h3,
+section.need_love strong {
+    color: #FE4676;
+    display: block;
+}
+
+section.made_by {
+    background: #21293F;
+}
+
+section.made_by h3 {
+    color: #fff;
+}
+
+section.made_by h3 strong {
+    color: #2EC9FF;
+}
+
+.box, input {
+    width: 450px;
+    padding: 24px;
+    background: #FFF;
+    border: 1px solid #DEE3E8;
+    border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+    box-shadow: 0 2px 2px rgba(0,0,0,.04);
+        -webkit-box-shadow: 0 2px 2px rgba(0,0,0,.04);
+        -moz-box-shadow: 0 2px 2px rgba(0,0,0,.04);
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.box {
+    margin: 0 auto;
+}
+
+input {
+    width: 220px;
+    padding: 16px;
+    height: 48px;
+    border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+    margin-top: 24px;
+    display: inline;
+    margin-right: 8px;
+    font-size: 14px;
+    float: left;
+}
+
+#mce-EMAIL:hover {
+    border-color: #C6D1DB;
+}
+
+#mce-EMAIL:focus {
+    border-color: #2EC9FF;
+}
+
+input[type="submit"] {
+    background: #2ECC71;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    float: left;
+    width: auto;
+    padding: 0 24px;
+    line-height: 44px;
+    border: 2px solid #3BB215;
+    box-shadow: 0 2px 2px rgba(0,0,0,.1);
+        -webkit-box-shadow: 0 2px 2px rgba(0,0,0,.1);
+        -moz-box-shadow: 0 2px 2px rgba(0,0,0,.1);
+    margin: 24px 0 0 0;
+}
+
+input[type="submit"]:hover {
+    background: #44d581;
+    cursor: pointer;
+}
+
+input[type="submit"]:active {
+    box-shadow: inset 0 0.1em 0.17em #25a25a;
+        -webkit-box-shadow: inset 0 0.1em 0.17em #25a25a;
+        -moz-box-shadow: inset 0 0.1em 0.17em #25a25a;
+    background-color: #2bc06a;
+}
+
+.box .betaintro {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+form {
+    margin-bottom: 80px;
+}
+
+form h4 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #21293F;
+    text-transform: uppercase;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+::-webkit-input-placeholder {
+   color: #C6D1DB;
+
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #C6D1DB;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #C6D1DB;  
+}
+
+:-ms-input-placeholder {  
+   color: #C6D1DB;  
+}
+
+#mce-success-response, #mce-error-response {
+    margin: 10px 0;
+    color: #2EC9FF;
+}
+
+footer {
+    background: #fff;
+    padding: 40px 0;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li {
+    text-align: center;
+}
+
+footer ul.menu li a {
+    color: #7D868E;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+footer ul.social {
+    margin-top: 40px;
+    text-align: center;
+}
+
+footer ul.social li {
+    display: inline-block;
+}
+
+footer ul.social li a {
+    width: 120px;
+    float: left;
+    margin: 0 10px;
+    font-weight: bold;
+    color: #707D90;
+    border: 2px solid #C6D1DB;
+    height: 48px;
+    padding-top: 12px;
+    border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+footer ul.social li.facebook a {
+    color: #3B5998;
+    border-color: #3B5998;
+}
+
+footer ul.social li.twitter a {
+    color: #4099FF;
+    border-color: #4099FF;
+}
+
+footer ul.social li.facebook a:hover {
+    color: #FFF;
+    background-color: #3B5998;
+}
+
+footer ul.social li.twitter a:hover {
+    color: #FFF;
+    background-color: #4099FF;
+}
+
+footer .love {
+    color: #FE4676;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 40px;
+}
+
+/* ----------- TABLETS LANDSCAPE ----------- */
+@media only screen 
+  and (max-width: 1200px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+      header {
+          min-height: 600px;
+          padding-top: 140px;
+      }
+      
+      header h2 {
+          font-size: 30px;
+      }
+      
+      .container {
+          width: 90%;
+      }
+}
+/* ----------- TABLETS PORTRAIT ----------- */
+@media only screen 
+  and (max-width: 900px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+      header {
+          min-height: 500px;
+          padding-top: 40px;
+      }
+      
+      section.features {
+          padding-bottom: 80px;
+      }
+    
+      section.features img {
+          display: none;
+      }
+      
+      section.features h3 {
+          font-size: 24px;
+      }
+      
+      section.features section.timeline {
+          margin-top: 80px;
+      }
+}
+
+/* ----------- SCREEN SIZE FIX ----------- */
+@media only screen 
+  and (max-width: 800px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+      header {
+          min-height: 300px;
+          padding-top: 40px;
+      }
+      
+      header h2 {
+        font-size: 30px;
+    }
+    
+    header #slogan {
+        font-size: 18px;
+    }
+      
+      section .subline {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+/* ----------- SCREEN SIZE FIX ----------- */
+@media only screen 
+  and (max-width: 700px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+      header h1 {
+          margin-bottom: 20px;
+      }
+      
+      header .button a {
+          margin-top: 20px;
+      }
+}
+
+/* ----------- SMARTPHONES ----------- */
+@media only screen 
+  and (max-width: 600px) {
+    header {
+        min-height: 0px;
+        padding-top: 50px;
+    }
+    
+    header h1 {
+        margin-bottom: 10px;
+    }
+    
+    header h2 {
+        font-size: 24px;
+    }
+    
+    header #slogan {
+        font-size: 16px;
+    }
+    
+    header .button a {
+        display: none;
+    }
+      
+    section h3 {
+        font-size: 24px;
+    }
+    
+    section .subline {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    
+    section.features img {
+        display: none;
+    }
+      
+    form {
+        margin-bottom: 40px;
+    }
+
+    .box {
+        width: 100%;
+        padding: 20px;
+        padding-top: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+
+    }
+
+    .box .betaintro {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    #mce-EMAIL {
+        border: 0;
+        box-shadow: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+        border-top: 1px solid #C6D1DB;
+        border-radius: 0;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+        position: fixed;
+        left: 0;
+        bottom: 60px;
+        height: 54px;
+        width: 100%;
+        -webkit-appearance: none;
+        z-index: 9;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        text-transform: uppercase;
+        padding: 0;
+        border-radius: 0;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+        border: none;
+        box-shadow: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+        margin: 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 60px;
+        -webkit-appearance: none;
+        z-index: 9;
+    }
+    
+    footer {
+        padding-bottom: 140px;
+    }
+}
+
+/* ----------- SMARTPHONES PORTRAIT ----------- */
+@media only screen 
+  and (max-width: 400px) {
+      header:before {
+          background-size: auto 100%;
+      }
+  }
